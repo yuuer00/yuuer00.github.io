@@ -25,8 +25,6 @@
 <meta name="twitter:description" content="vue通过事件向父级组件发送消息组件内用$emit定义事件名称，传递参数 123456789101112131415161718&amp;lt;template&amp;gt;  &amp;lt;p @click=&amp;quot;run&amp;quot;&amp;gt;textComponent 组件&amp;lt;/p&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt;export default &amp;#123;  name:">
 
     
-    <link rel="alternative" href="/atom.xml" title="yuuer&#39;blog" type="application/atom+xml">
-    
     
     <link rel="icon" href="/img/favicon.ico">
     
@@ -60,9 +58,7 @@
 					
 						<li><a href="/archives">Archives</a></li>
 					
-						<li><a href="/about">About</a></li>
-					
-					<li>
+					<li style="display: none">
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
@@ -175,9 +171,6 @@
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
-
-  
-
 
   
 
@@ -384,42 +377,11 @@ $(document).ready(function(){
 
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.article-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-      var alt = this.alt;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
-  if($.fancybox){
-    $('.fancybox').fancybox();
-  }
-}); 
-</script>
-
 
 
 <!-- Analytics Begin -->
 
 
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
 
 
 
