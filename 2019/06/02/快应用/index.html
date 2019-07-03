@@ -4,25 +4,25 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
   
-    <title>Vue 向父级组件发送消息 | yuuer&#39;blog</title>
+    <title>快应用 | yuuer&#39;blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="yuuer">
     
 
     
-    <meta name="description" content="vue通过事件向父级组件发送消息组件内用$emit定义事件名称，传递参数 123456789101112131415161718&amp;lt;template&amp;gt;  &amp;lt;p @click=&amp;quot;run&amp;quot;&amp;gt;textComponent 组件&amp;lt;/p&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt;export default &amp;#123;  name:">
-<meta name="keywords" content="vue">
+    <meta name="description" content="关于快应用关于快应用的背景以及开发流程，快应用的文档叙述的很清楚，详见快应用开发文档因为快应用底层代码用了vue，所以好多东西和vue也有点像。拿到设计图，改一下设计尺寸（designWidth）基本样式支持的有限，可以看一下基本样式支持表 快应用注意事项 运用命令生成签名文件失败，建议用IDE的生成证书功能（hap-生成证书） 建议开启eslint，保证代码风格（如何开启？开发文档上有） 默认的">
+<meta name="keywords" content="快应用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue 向父级组件发送消息">
-<meta property="og:url" content="https://yuuer00.github.io/2018/12/06/vue-communication/index.html">
+<meta property="og:title" content="快应用">
+<meta property="og:url" content="https://yuuer00.github.io/2019/06/02/快应用/index.html">
 <meta property="og:site_name" content="yuuer&#39;blog">
-<meta property="og:description" content="vue通过事件向父级组件发送消息组件内用$emit定义事件名称，传递参数 123456789101112131415161718&amp;lt;template&amp;gt;  &amp;lt;p @click=&amp;quot;run&amp;quot;&amp;gt;textComponent 组件&amp;lt;/p&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt;export default &amp;#123;  name:">
+<meta property="og:description" content="关于快应用关于快应用的背景以及开发流程，快应用的文档叙述的很清楚，详见快应用开发文档因为快应用底层代码用了vue，所以好多东西和vue也有点像。拿到设计图，改一下设计尺寸（designWidth）基本样式支持的有限，可以看一下基本样式支持表 快应用注意事项 运用命令生成签名文件失败，建议用IDE的生成证书功能（hap-生成证书） 建议开启eslint，保证代码风格（如何开启？开发文档上有） 默认的">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-03T05:45:41.000Z">
+<meta property="og:updated_time" content="2019-07-03T01:45:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue 向父级组件发送消息">
-<meta name="twitter:description" content="vue通过事件向父级组件发送消息组件内用$emit定义事件名称，传递参数 123456789101112131415161718&amp;lt;template&amp;gt;  &amp;lt;p @click=&amp;quot;run&amp;quot;&amp;gt;textComponent 组件&amp;lt;/p&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt;export default &amp;#123;  name:">
+<meta name="twitter:title" content="快应用">
+<meta name="twitter:description" content="关于快应用关于快应用的背景以及开发流程，快应用的文档叙述的很清楚，详见快应用开发文档因为快应用底层代码用了vue，所以好多东西和vue也有点像。拿到设计图，改一下设计尺寸（designWidth）基本样式支持的有限，可以看一下基本样式支持表 快应用注意事项 运用命令生成签名文件失败，建议用IDE的生成证书功能（hap-生成证书） 建议开启eslint，保证代码风格（如何开启？开发文档上有） 默认的">
 
     
     
@@ -78,14 +78,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2018/12/06/vue-communication/" title="Vue 向父级组件发送消息" itemprop="url">Vue 向父级组件发送消息</a>
+      <a href="/2019/06/02/快应用/" title="快应用" itemprop="url">快应用</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="yuuer" target="_blank" itemprop="author">yuuer</a>
 		
   </p><p class="article-time">
-    <time datetime="2018-12-05T16:00:00.000Z" itemprop="datePublished"> Published 2018-12-06</time>
+    <time datetime="2019-06-01T16:00:00.000Z" itemprop="datePublished"> Published 2019-06-02</time>
     
   </p>
 </header>
@@ -94,17 +94,32 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vue通过事件向父级组件发送消息"><span class="toc-number">1.</span> <span class="toc-text">vue通过事件向父级组件发送消息</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于快应用"><span class="toc-number">1.</span> <span class="toc-text">关于快应用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#快应用注意事项"><span class="toc-number">2.</span> <span class="toc-text">快应用注意事项</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#合理用回调函数"><span class="toc-number">3.</span> <span class="toc-text">合理用回调函数</span></a></li></ol>
 		
 		</div>
 		
-		<h1 id="vue通过事件向父级组件发送消息"><a href="#vue通过事件向父级组件发送消息" class="headerlink" title="vue通过事件向父级组件发送消息"></a>vue通过事件向父级组件发送消息</h1><p>组件内用$emit定义事件名称，传递参数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;p @click=&quot;run&quot;&gt;textComponent 组件&lt;/p&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &quot;test&quot;,</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      content: &quot;哈哈&quot;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    run () &#123;</span><br><span class="line">      this.$emit(&quot;textEmit&quot;, this.content);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+		<h1 id="关于快应用"><a href="#关于快应用" class="headerlink" title="关于快应用"></a>关于快应用</h1><p>关于快应用的背景以及开发流程，快应用的文档叙述的很清楚，详见<a href="https://doc.quickapp.cn/" target="_blank" rel="noopener">快应用开发文档</a><br>因为快应用底层代码用了vue，所以好多东西和vue也有点像。<br>拿到设计图，改一下设计尺寸（designWidth）<br>基本样式支持的有限，可以看一下基本样式支持表</p>
+<h1 id="快应用注意事项"><a href="#快应用注意事项" class="headerlink" title="快应用注意事项"></a>快应用注意事项</h1><ul>
+<li>运用命令生成签名文件失败，建议用IDE的生成证书功能（hap-生成证书）</li>
+<li>建议开启eslint，保证代码风格（如何开启？开发文档上有）</li>
+<li>默认的eslint配置，console.log会提示warn，调试不输出日志，修改配置文件(.eslintrc.json)<a href="#item1">【1】</a></li>
+<li>默认调试不打印日志，修改配置文件(manifest.json)<a href="#item2">【2】</a></li>
+<li>当去到新公司接手已经开发的老项目，需要看下是否有签名文件，在/sign/release目录下面有两个文件(private.pem,certificate.pem),如果这个快应用已经上线，这两个文件不能更改。</li>
+<li>每次提交审核打包versionCode加一</li>
+</ul>
+<h1 id="合理用回调函数"><a href="#合理用回调函数" class="headerlink" title="合理用回调函数"></a>合理用回调函数</h1><p>快应用api多为异步，如果在app.ux调用异步函数，使用回调确定来确保可以获取到值<br>比如：获取设备信息device.getInfo()，虽然是异步函数，但是获取设备信息返回值特别快，并没有发现执行过回调（我这样写只是出于对一步函数的尊重–苦笑0_0）</p>
+<p>app.ux—onCreat()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">device.getInfo(&#123;</span><br><span class="line">  success: (ret) =&gt; &#123;</span><br><span class="line">    this.appBrand = obj[ret.brand] || ret.brand</span><br><span class="line">    if (_this.brandReadyCallBack) &#123;</span><br><span class="line">      _this.brandReadyCallBack(ret.brand)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>父组件调用事件，获得组件传递的数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;du-s @textEmit=&quot;text&quot;&gt;&lt;/du-s&gt;</span><br><span class="line">&lt;/div&gt;  </span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  methods: &#123;</span><br><span class="line">    text (q) &#123;</span><br><span class="line">      console.log(q);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>/home/index.ux—onInit()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if (this.$app.appBrand) &#123;</span><br><span class="line">  console.log(this.$app.appBrand)</span><br><span class="line">&#125; else&#123;</span><br><span class="line">  this.$app.brandReadyCallBack = brand =&gt;&#123;</span><br><span class="line">    console.log(brand)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>结果输出为：哈哈</p>
+<p><a name="item1">【1】忽视log配置.eslintr.json</a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">"rules": &#123;</span><br><span class="line">  "no-console": [</span><br><span class="line">    "warn",</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"allow"</span>: [</span><br><span class="line">        <span class="string">"log"</span>,</span><br><span class="line">        <span class="string">"info"</span>,</span><br><span class="line">        <span class="string">"warn"</span>,</span><br><span class="line">        <span class="string">"error"</span></span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a name="item2">【2】打印日志配置manifest.json</a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"config": &#123;</span><br><span class="line">  "logLevel": "debug"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -113,7 +128,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/vue/">vue</a>
+  <span></span> <a href="/tags/快应用/">快应用</a>
   </div>
 
 </div>
@@ -122,7 +137,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="https://yuuer00.github.io/2018/12/06/vue-communication/" data-title="Vue 向父级组件发送消息 | yuuer&#39;blog" data-tsina class="share clearfix">
+	  <div data-url="https://yuuer00.github.io/2019/06/02/快应用/" data-title="快应用 | yuuer&#39;blog" data-tsina class="share clearfix">
 	  </div>
 	
 	</div>
@@ -135,19 +150,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev">
- <a href="/2019/01/01/日常总结/" title="日常总结">
-  <strong>上一篇：</strong><br>
-  <span>
-  日常总结</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2018/12/06/插件总结/" title="插件">
+<a href="/2019/01/01/日常总结/" title="日常总结">
  <strong>下一篇：</strong><br> 
- <span>插件
+ <span>日常总结
 </span>
 </a>
 </div>
@@ -164,7 +171,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vue通过事件向父级组件发送消息"><span class="toc-number">1.</span> <span class="toc-text">vue通过事件向父级组件发送消息</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#关于快应用"><span class="toc-number">1.</span> <span class="toc-text">关于快应用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#快应用注意事项"><span class="toc-number">2.</span> <span class="toc-text">快应用注意事项</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#合理用回调函数"><span class="toc-number">3.</span> <span class="toc-text">合理用回调函数</span></a></li></ol>
  
   </div>
 
